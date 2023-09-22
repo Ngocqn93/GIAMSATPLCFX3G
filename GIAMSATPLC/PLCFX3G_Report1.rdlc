@@ -44,6 +44,7 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <RepeatWith>Tablix1</RepeatWith>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -56,6 +57,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -289,7 +291,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -377,6 +378,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <RepeatColumnHeaders>true</RepeatColumnHeaders>
         <DataSetName>PLCFX3GSQL</DataSetName>
         <Top>0.34167in</Top>
         <Left>0.405in</Left>

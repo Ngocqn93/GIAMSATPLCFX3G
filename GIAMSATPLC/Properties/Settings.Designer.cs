@@ -45,5 +45,15 @@ namespace GIAMSATPLCFX3G.Properties {
                 return ((string)(this["FX3G_SQLConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1F1313P\\SQLEXPRESS;Initial Catalog=FX3G-SQL;User ID=sa")]
+        public string FX3G_SQLConnectionString1 {
+            get {
+                return ((string)(this["FX3G_SQLConnectionString1"]));
+            }
+        }
     }
 }

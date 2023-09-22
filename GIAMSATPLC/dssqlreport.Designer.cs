@@ -855,8 +855,8 @@ namespace GIAMSATPLCFX3G.dssqlreportTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [FX3GA_Data] ([date_time], [data_Integer], [data_Text], [data_Real]) " +
-                "VALUES (@date_time, @data_Integer, @data_Text, @data_Real)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FX3GA_Data] ([date_time], [data_Integer], [data_Text], [data_R" +
+                "eal]) VALUES (@date_time, @data_Integer, @data_Text, @data_Real)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_time", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_Integer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_Integer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -877,31 +877,16 @@ namespace GIAMSATPLCFX3G.dssqlreportTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT    FX3GA_Data.*\r\nFROM         FX3GA_Data\r\nWHERE ( date_time BETWEEN @From " +
-                "AND @To )";
+            this._commandCollection[0].CommandText = "SELECT date_time, data_Integer, data_Text, data_Real FROM dbo.FX3GA_Data";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@From", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "date_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@To", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "date_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dssqlreport.FX3GA_DataDataTable dataTable, global::System.Nullable<global::System.DateTime> From, global::System.Nullable<global::System.DateTime> To) {
+        public virtual int Fill(dssqlreport.FX3GA_DataDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((From.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(From.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((To.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(To.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -913,20 +898,8 @@ namespace GIAMSATPLCFX3G.dssqlreportTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dssqlreport.FX3GA_DataDataTable GetData(global::System.Nullable<global::System.DateTime> From, global::System.Nullable<global::System.DateTime> To) {
+        public virtual dssqlreport.FX3GA_DataDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((From.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(From.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((To.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(To.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             dssqlreport.FX3GA_DataDataTable dataTable = new dssqlreport.FX3GA_DataDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

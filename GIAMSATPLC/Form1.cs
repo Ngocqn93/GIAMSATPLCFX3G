@@ -1,23 +1,25 @@
 ﻿ using System; 
- using System.Collections.Generic; 
- using System.ComponentModel; 
- using System.Data; 
- using System.Drawing; 
- using System.Linq; 
- using System.Text; 
- using System.Threading.Tasks; 
- using System.Windows.Forms; 
- using OPCAutomation; // Thư viện OPC 
- using NPOI.HSSF.UserModel;// Thư viện NPOI 
- using NPOI.SS.UserModel;// Thư viện NPOI 
- using NPOI.XSSF.UserModel;// Thư viện NPOI 
+using System.Collections.Generic; 
+using System.ComponentModel; 
+using System.Data; 
+using System.Drawing; 
+using System.Linq; 
+using System.Text;
+using System.Threading.Tasks; 
+using System.Windows.Forms; 
+using OPCAutomation; // Thư viện OPC 
+using NPOI.HSSF.UserModel;// Thư viện NPOI 
+using NPOI.SS.UserModel;// Thư viện NPOI 
+using NPOI.XSSF.UserModel;// Thư viện NPOI 
 using System.IO;
+using Font = System.Drawing.Font;
 
 namespace GIAMSATPLCFX3G
 {
     public partial class Form1 : Form
     {
-        
+
+      
         public bool isZeroCode = true; // Biến để kiểm tra xem mã số có phải là 0 hay không
         private bool IsConnected { get; set; } = false; // Thêm một thuộc tính để theo dõi trạng thái kết nối
         private bool hasError = false;
@@ -28,6 +30,7 @@ namespace GIAMSATPLCFX3G
         //==========================CHƯƠNG TRÌNH CON CLASS==================
         Class_Status_Display statusDisplay = new Class_Status_Display();
         class_Login fn_login = new class_Login();
+        class_Excel_Export fn_Excel = new class_Excel_Export();
         //=======================QUẢN LÝ NGƯỜI DÙNG=========================
         // Nút nhấn đăng nhập
         private void btt_Login_Click(object sender, EventArgs e)
@@ -115,7 +118,7 @@ namespace GIAMSATPLCFX3G
 
         }
         //==========================KEPServerEX CONNECT=====================
-        static int tagNumber = 27;      // Cài đặt số lượng tag của project
+        static int tagNumber = 37;      // Cài đặt số lượng tag của project
         static int PLCscantime = 1000;  // Cài đặt thời gian quét PLC
         // Gọi các kết nối OPC
         public OPCAutomation.OPCServer AnOPCServer; //Đây là khai báo một biến AnOPCServer kiểu OPCAutomation.OPCServer.Biến này có thể được sử dụng để đối tượng OPCServer(máy chủ OPC) liên quan đến một mục đích cụ thể.
@@ -183,7 +186,8 @@ namespace GIAMSATPLCFX3G
                 Console.WriteLine(tagID.Length);
                 // textbox
 
-                if (getTagID == 1) // Kiểm tra lỗi
+                if (getTagID == 1 || getTagID == 28 || getTagID == 29 || getTagID == 30 || getTagID == 31|| getTagID == 32|| getTagID == 33|| 
+                    getTagID == 34 || getTagID == 35 || getTagID == 36 || getTagID == 36 ) // Kiểm tra lỗi
                 {
                     txt_Code.Text = tagValue;
                     sql_Integer= tagValue; // Save SQL
@@ -549,6 +553,17 @@ namespace GIAMSATPLCFX3G
             frm.rpDatetime_Start = Date_Start + ' ' + Time_Start;
             frm.rpDatetime_End = Date_End + ' ' + Time_End;
             frm.Show();
+        }
+        //xuất file excel
+        private void btt_excel_Click(object sender, EventArgs e)
+        { // Gọi hàm chương trình con xuất Excel
+            fn_Excel.Execute(dtpk_DateStart,
+                             dtpk_TimeStart,
+                             dtpk_DateEnd,
+                             dtpk_TimeEnd
+                        
+                );
+
         }
     }
 }

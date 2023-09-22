@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FX3G-SQL" Class="report_excelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-1F1313P\SQLEXPRESS;Initial Catalog=FX3G-SQL;User ID=sa" SettingsObjectName="GIAMSATPLCFX3G.Properties.Settings" SettingsPropertyName="FX3G_SQLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FX3GA_Data" Member="FX3GA_Datas">
+    <Type Name="FX3GA_Data">
+      <Column Name="date_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="data_Integer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="data_Text" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="data_Real" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[FX3GA-Data]" Member="FX3GA_Data1s">
+    <Type Name="FX3GA_Data1">
+      <Column Name="date_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="data_Integer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="data_Text" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="data_Real" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

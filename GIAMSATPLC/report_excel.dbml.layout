@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.25" name="report_excel">
+  <DataContextMoniker Name="/report_excelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f6676a07-3af8-4896-96db-21a1ce0fea57" absoluteBounds="1.5, 10.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/report_excelDataContext/FX3GA_Data" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0fcc565-cf2a-473f-9c1a-3b439e01fd5a" absoluteBounds="1.5149999999999997, 10.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5bf130a4-2f50-4a72-bbd8-07d995226797" absoluteBounds="4.25, 2.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/report_excelDataContext/FX3GA_Data1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7de673d3-3abf-4d3c-bd94-46b974760ccb" absoluteBounds="4.265, 2.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

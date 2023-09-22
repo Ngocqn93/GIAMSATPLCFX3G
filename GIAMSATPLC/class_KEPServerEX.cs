@@ -42,6 +42,16 @@ namespace GIAMSATPLCFX3G
             string tagID_25 = "Channel1.Device1.Status_PLCERROR9";
             string tagID_26 = "Channel1.Device1.Report_Trigger";
             string tagID_27 = "Channel1.Device1.Report_D";
+            string tagID_28 = "Channel1.Device1.Status_Numbererror1";
+            string tagID_29 = "Channel1.Device1.Status_Numbererror2";
+            string tagID_30 = "Channel1.Device1.Status_Numbererror3";
+            string tagID_31 = "Channel1.Device1.Status_Numbererror4";
+            string tagID_32 = "Channel1.Device1.Status_Numbererror5";
+            string tagID_33 = "Channel1.Device1.Status_Numbererror6";
+            string tagID_34 = "Channel1.Device1.Status_Numbererror7";
+            string tagID_35 = "Channel1.Device1.Status_Numbererror8";
+            string tagID_36= "Channel1.Device1.Status_Numbererror9";
+            string tagID_37 = "Channel1.Device1.Status_Numbererror10";
             string[] tags;
             tags = new string[tagnumber];
             tags.SetValue(tagID_1, 1);
@@ -71,6 +81,17 @@ namespace GIAMSATPLCFX3G
             tags.SetValue(tagID_25, 25);
             tags.SetValue(tagID_26, 26);
             tags.SetValue(tagID_27, 27);
+            tags.SetValue(tagID_28, 28);
+            tags.SetValue(tagID_29, 29);
+            tags.SetValue(tagID_30, 30);
+            tags.SetValue(tagID_31, 31);
+            tags.SetValue(tagID_32, 32);
+            tags.SetValue(tagID_33, 33);
+            tags.SetValue(tagID_34, 34);
+            tags.SetValue(tagID_35, 35);
+            tags.SetValue(tagID_36, 36);
+            tags.SetValue(tagID_37, 37);
+           
             return tags;
         }
         // Class tạo array đọc ID tags - mặc định không đổi

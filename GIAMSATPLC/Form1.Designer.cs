@@ -85,6 +85,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btt_Search = new System.Windows.Forms.Button();
             this.btt_report1 = new System.Windows.Forms.Button();
+            this.btt_excel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sym_Lamp_PLC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sym_Lamp_Error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sym_Lamp_servorun)).BeginInit();
@@ -687,7 +688,7 @@
             // 
             // btt_report1
             // 
-            this.btt_report1.Location = new System.Drawing.Point(1070, 465);
+            this.btt_report1.Location = new System.Drawing.Point(1053, 464);
             this.btt_report1.Name = "btt_report1";
             this.btt_report1.Size = new System.Drawing.Size(75, 29);
             this.btt_report1.TabIndex = 19;
@@ -695,11 +696,22 @@
             this.btt_report1.UseVisualStyleBackColor = true;
             this.btt_report1.Click += new System.EventHandler(this.btt_report1_Click);
             // 
+            // btt_excel
+            // 
+            this.btt_excel.Location = new System.Drawing.Point(1147, 464);
+            this.btt_excel.Name = "btt_excel";
+            this.btt_excel.Size = new System.Drawing.Size(107, 28);
+            this.btt_excel.TabIndex = 20;
+            this.btt_excel.Text = "Xuất Excel";
+            this.btt_excel.UseVisualStyleBackColor = true;
+            this.btt_excel.Click += new System.EventHandler(this.btt_excel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1302, 880);
+            this.Controls.Add(this.btt_excel);
             this.Controls.Add(this.btt_report1);
             this.Controls.Add(this.btt_Search);
             this.Controls.Add(this.grb_SortbyTime);
@@ -808,14 +820,15 @@
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.TextBox txt_ND;
         public System.Windows.Forms.GroupBox grb_SortbyTime;
-        private System.Windows.Forms.DateTimePicker dtpk_TimeEnd;
-        private System.Windows.Forms.DateTimePicker dtpk_TimeStart;
-        private System.Windows.Forms.DateTimePicker dtpk_DateEnd;
-        private System.Windows.Forms.DateTimePicker dtpk_DateStart;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btt_Search;
         private System.Windows.Forms.Button btt_report1;
+        private System.Windows.Forms.Button btt_excel;
+        public System.Windows.Forms.DateTimePicker dtpk_TimeEnd;
+        public System.Windows.Forms.DateTimePicker dtpk_TimeStart;
+        public System.Windows.Forms.DateTimePicker dtpk_DateEnd;
+        public System.Windows.Forms.DateTimePicker dtpk_DateStart;
     }
 }
 

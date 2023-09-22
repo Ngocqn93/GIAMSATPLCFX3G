@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GIAMSATPLCFX3G
 {
     public partial class form_Report : Form
@@ -21,7 +22,7 @@ namespace GIAMSATPLCFX3G
         public string rpDatetime_End;
         public string rpShift_Search_Start;
         public string rpShift_Search_End;
-        public string rptomorrow;
+        
         // Form load
         private void form_Report_Load(object sender, EventArgs e)
         {
@@ -35,15 +36,12 @@ namespace GIAMSATPLCFX3G
                 DateTime DateEnd = Convert.ToDateTime(rpDatetime_End);
                 // Đưa câu lệnh query sang Dataset
                 this.FX3GA_DataTableAdapter.Fill(this.dssqlreport.FX3GA_Data, DateStart, DateEnd);
-                this.reportViewer1.RefreshReport(); // Hiển thị báo cáo
+                this.reportViewer1.RefreshReport();
             }
             // Làm full màn hình in
             reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -30,19 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dssqlreport = new GIAMSATPLCFX3G.dssqlreport();
-            this.FX3GA_DataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.FX3GA_DataTableAdapter = new GIAMSATPLCFX3G.dssqlreportTableAdapters.FX3GA_DataTableAdapter();
+            this.FX3GA_DataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dssqlreport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FX3GA_DataBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dssqlreport
+            // 
+            this.dssqlreport.DataSetName = "dssqlreport";
+            this.dssqlreport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "PLCFX3GSQL";
-            reportDataSource1.Value = this.FX3GA_DataBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "GIAMSATPLCFX3G.PLCFX3G_Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -50,21 +54,15 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 552);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // dssqlreport
+            // FX3GA_DataTableAdapter
             // 
-            this.dssqlreport.DataSetName = "dssqlreport";
-            this.dssqlreport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.FX3GA_DataTableAdapter.ClearBeforeFill = true;
             // 
             // FX3GA_DataBindingSource
             // 
             this.FX3GA_DataBindingSource.DataMember = "FX3GA_Data";
             this.FX3GA_DataBindingSource.DataSource = this.dssqlreport;
-            // 
-            // FX3GA_DataTableAdapter
-            // 
-            this.FX3GA_DataTableAdapter.ClearBeforeFill = true;
             // 
             // form_Report
             // 
@@ -85,8 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource FX3GA_DataBindingSource;
         private dssqlreport dssqlreport;
         private dssqlreportTableAdapters.FX3GA_DataTableAdapter FX3GA_DataTableAdapter;
+        private System.Windows.Forms.BindingSource FX3GA_DataBindingSource;
     }
 }
